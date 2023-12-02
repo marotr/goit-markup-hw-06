@@ -40,13 +40,20 @@
       <use href="./images/icons.svg#person-black"></use>
       <use href="./images/icons.svg#close-black1"></use>
       <use href="./images/icons.svg#click"></use>
+      <use href="./images/icons.svg#solid_menu"></use>
     </svg>
-    <header class="header">
+    <!-- <header class="header">
       <div class="nav-menu container">
         <nav class="navigation">
           <a class="logo" href="./index.html"
             >Web<span class="logo-grey">Studio</span></a
           >
+          <a class="menu-burger" href="">
+            <svg class="menu-burger" height="24" width="24">
+              <use href="./images/icons.svg#solid_menu"></use>
+            </svg>
+          </a>
+        
           <ul class="menu-main">
             <li><a class="menu current" href="./index.html">Studio</a></li>
             <li><a class="menu" href="">Portfolio</a></li>
@@ -68,8 +75,9 @@
             </li>
           </ul>
         </address>
+       
       </div>
-    </header>
+    </header>-->
 
     <main>
       <!--section 1-->
@@ -87,17 +95,17 @@
 
       <!--section 2-->
 
-      <section class="advantages-section section">
+      <section class="advantages section">
         <div class="container">
           <h2 class="visually-hidden">Our Advantages</h2>
-          <ul class="advantages">
+          <ul class="advantages-list">
             <li class="advantages-list-item">
               <div class="icon-list">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/icons.svg#antenna-1"></use>
                 </svg>
               </div>
-              <h3 class="advantages-list">Strategy</h3>
+              <h3 class="advantages-list-title">Strategy</h3>
               <p class="advantages-text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
@@ -109,7 +117,7 @@
                   <use href="./images/icons.svg#clock-1"></use>
                 </svg>
               </div>
-              <h3 class="advantages-list">Punctuality</h3>
+              <h3 class="advantages-list-title">Punctuality</h3>
               <p class="advantages-text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
@@ -121,7 +129,7 @@
                   <use href="./images/icons.svg#diagram-1"></use>
                 </svg>
               </div>
-              <h3 class="advantages-list">Diligence</h3>
+              <h3 class="advantages-list-title">Diligence</h3>
               <p class="advantages-text">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
@@ -133,7 +141,7 @@
                   <use href="./images/icons.svg#astronaut-1"></use>
                 </svg>
               </div>
-              <h3 class="advantages-list">Technologies</h3>
+              <h3 class="advantages-list-title">Technologies</h3>
               <p class="advantages-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
@@ -152,6 +160,7 @@
             <li class="team-list-item">
               <div class="team-img">
                 <img
+                  srcset="./images/img_1.jpg 1x, ./images/img_1@2x.jpg 2x"
                   src="./images/img_1.jpg"
                   alt="product-designer"
                   width="264"
@@ -159,7 +168,7 @@
                 />
               </div>
               <div class="team-descr">
-                <h3 class="team-list-header">Mark Guerrero</h3>
+                <h3 class="team-list-title">Mark Guerrero</h3>
                 <p class="team-text">Product Designer</p>
                 <ul class="social-media-team">
                   <li class="icon-circle">
@@ -196,6 +205,7 @@
             <li class="team-list-item">
               <div class="team-img">
                 <img
+                  srcset="./images/img_2.jpg 1x, ./images/img_2@2x.jpg 2x"
                   src="./images/img_2.jpg"
                   alt="frontend-developer"
                   width="264"
@@ -203,7 +213,7 @@
                 />
               </div>
               <div class="team-descr">
-                <h3 class="team-list-header">Tom Ford</h3>
+                <h3 class="team-list-title">Tom Ford</h3>
                 <p class="team-text">Frontend Developer</p>
 
                 <ul class="social-media-team">
@@ -241,6 +251,7 @@
             <li class="team-list-item">
               <div class="team-img">
                 <img
+                  srcset="./images/img_3.jpg 1x, ./images/img_3@2x.jpg 2x"
                   src="./images/img_3.jpg"
                   alt="marketing"
                   width="264"
@@ -248,7 +259,7 @@
                 />
               </div>
               <div class="team-descr">
-                <h3 class="team-list-header">Camila Garcia</h3>
+                <h3 class="team-list-title">Camila Garcia</h3>
                 <p class="team-text">Marketing</p>
 
                 <ul class="social-media-team">
@@ -286,6 +297,7 @@
             <li class="team-list-item">
               <div class="team-img">
                 <img
+                  srcset="./images/img_4.jpg 1x, ./images/img_4@2x.jpg 2x"
                   src="./images/img_4.jpg"
                   alt="ui-designer"
                   width="264"
@@ -293,7 +305,7 @@
                 />
               </div>
               <div class="team-descr">
-                <h3 class="team-list-header">Daniel Wilson</h3>
+                <h3 class="team-list-title">Daniel Wilson</h3>
                 <p class="team-text">UI Designer</p>
 
                 <ul class="social-media-team">
@@ -340,7 +352,12 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="portfolio-img">
-                <img src="./images/portf_1.jpg" alt="banking-app" width="360" />
+                <img
+                  srcset="./images/portf_1.jpg 1x./images/portf_1@2x.jpg 2x"
+                  src="./images/portf_1.jpg"
+                  alt="banking-app"
+                  width="360"
+                />
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -348,7 +365,7 @@
                 </p>
               </div>
               <div class="portfolio-descr">
-                <h3 class="portfolio-list-header">Banking App</h3>
+                <h3 class="portfolio-list-title">Banking App</h3>
                 <p class="portfolio-text">App</p>
               </div>
             </li>
@@ -356,6 +373,7 @@
             <li class="portfolio-item">
               <div class="portfolio-img">
                 <img
+                  srcset="./images/portf_2.jpg 1x ./images/portf_2@2x.jpg 2x"
                   src="./images/portf_2.jpg"
                   alt="cashless-payment"
                   width="360"
@@ -367,13 +385,14 @@
                 </p>
               </div>
               <div class="portfolio-descr">
-                <h3 class="portfolio-list-header">Cashless Payment</h3>
+                <h3 class="portfolio-list-title">Cashless Payment</h3>
                 <p class="portfolio-text">Marketing</p>
               </div>
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img">
                 <img
+                  srcset="./images/portf_3.jpg 1x, ./images/portf_3@2x.jpg 2x"
                   src="./images/portf_3.jpg"
                   alt="meditation-app"
                   width="360"
@@ -386,13 +405,14 @@
                 </p>
               </div>
               <div class="portfolio-descr">
-                <h3 class="portfolio-list-header">Meditation App</h3>
+                <h3 class="portfolio-list-title">Meditation App</h3>
                 <p class="portfolio-text">App</p>
               </div>
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img">
                 <img
+                  srcset="./images/portf_4.jpg 1x, ./images/portf_4@2x.jpg 2x"
                   src="./images/portf_4.jpg"
                   alt="taxi-service"
                   width="360"
@@ -405,13 +425,14 @@
                 </p>
               </div>
               <div class="portfolio-descr">
-                <h3 class="portfolio-list-header">Taxi Service</h3>
+                <h3 class="portfolio-list-title">Taxi Service</h3>
                 <p class="portfolio-text">Marketing</p>
               </div>
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img">
                 <img
+                  srcset="./images/portf_5.jpg 1x, ./images/portf_5@2x.jpg 2x"
                   src="./images/portf_5.jpg"
                   alt="screen-illustrations"
                   width="360"
@@ -424,13 +445,14 @@
                 </p>
               </div>
               <div class="portfolio-descr">
-                <h3 class="portfolio-list-header">Screen Illustrations</h3>
+                <h3 class="portfolio-list-title">Screen Illustrations</h3>
                 <p class="portfolio-text">Design</p>
               </div>
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img">
                 <img
+                  srcset="./images/portf_6.jpg 1x, ./images/portf_6@2x.jpg 2x"
                   src="./images/portf_6.jpg"
                   alt="online-courses"
                   width="360"
@@ -443,7 +465,7 @@
                 </p>
               </div>
               <div class="portfolio-descr">
-                <h3 class="portfolio-list-header">Online Courses</h3>
+                <h3 class="portfolio-list-title">Online Courses</h3>
                 <p class="portfolio-text">Marketing</p>
               </div>
             </li>
@@ -464,7 +486,7 @@
           </p>
         </div>
         <div class="social-media-footer">
-          <p class="footer-title">Social media</p>
+          <p class="footer-social">Social media</p>
           <ul class="social-media-icons">
             <li class="icon-footer">
               <a class="icon-link-footer" href="">
@@ -600,7 +622,7 @@
             <label class="terms" for="user-privacy"
               ><span class="checkbox"
                 ><svg class="svg-checkbox" width="10" height="8">
-                  <use href="./images/icons.svg#click"></use></svg></span
+                  <use href="./images/icons.svg#checked"></use></svg></span
               >I accept the terms and conditions of the
               <a class="link-privacy" href="">Privacy Policy</a></label
             >
