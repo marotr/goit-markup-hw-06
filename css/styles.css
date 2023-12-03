@@ -356,8 +356,7 @@ button {
 .icon-list {
   display: none;
 }
-.advantages-list-title,
-.team-list-title {
+.advantages-list-title {
   font-size: 36px;
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -442,6 +441,13 @@ button {
 .team-list-title {
   text-align: center;
   margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #2e2f42;
 }
 
 .team-img img {
