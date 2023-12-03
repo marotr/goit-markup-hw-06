@@ -129,6 +129,13 @@ button {
     font-style: normal;
     display: flex;
   }
+
+  .address-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
   .address-details {
     color: #434455;
     font-size: 16px;
@@ -146,6 +153,7 @@ button {
   }
   .address-list {
     display: flex;
+    flex-wrap: nowrap;
     gap: 40px;
     align-items: center;
   }
