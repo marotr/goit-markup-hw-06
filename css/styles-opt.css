@@ -4,8 +4,6 @@ body {
   background-color: #fff;
 }
 ul {
-  margin-top: 0;
-  margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 }
@@ -13,6 +11,7 @@ ul {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+button,
 input {
   font-family: inherit;
 }
@@ -22,12 +21,13 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 img {
-  background: lightgray -97.034px -0.927px / 181.897% 251.37% no-repeat;
+  background: #d3d3d3 -97.034px -0.927px/181.897% 251.37%no-repeat;
   display: block;
   max-width: 100%;
 }
@@ -54,7 +54,6 @@ main {
   flex-grow: 1;
 }
 button {
-  font-family: inherit;
   color: currentColor;
 }
 @media (min-resolution: 192dpi) {
@@ -66,17 +65,15 @@ button {
       url(../images/people-office@2x.jpg);
   }
 }
-
-/*header*/
 .container {
   margin: 0 auto;
   flex-shrink: 0;
   padding: 0 15px;
   max-width: 318px;
 }
-.menu-main,
+.address,
 .menu,
-.address {
+.menu-main {
   display: none;
 }
 @media screen and (min-width: 768px) {
@@ -90,10 +87,10 @@ button {
     display: flex;
     gap: 40px;
   }
-  .menu:hover,
-  .menu:focus,
+  .address-details:focus,
   .address-details:hover,
-  .address-details:focus {
+  .menu:focus,
+  .menu:hover {
     color: #404bbf;
   }
   .menu {
@@ -108,14 +105,12 @@ button {
     position: relative;
     display: block;
   }
-
   .menu.current::after,
   .menu:hover::after {
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: #404bbf;
-    content: "";
     display: block;
     content: "";
     position: absolute;
@@ -123,12 +118,10 @@ button {
     bottom: -1px;
     color: #404bbf;
   }
-
   .address {
     font-style: normal;
     display: flex;
   }
-
   .address-list {
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +138,6 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -157,7 +149,6 @@ button {
     align-items: center;
   }
 }
-
 .nav-menu {
   display: flex;
   justify-content: space-between;
@@ -169,15 +160,13 @@ button {
 }
 .header {
   border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
 }
-
 .menu-main {
   display: flex;
   gap: 40px;
 }
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -192,8 +181,6 @@ button {
 .logo-grey {
   color: #2e2f42;
 }
-
-/*Mobile Menu*/
 .menu-mobile {
   display: none;
   padding: 16px 24px 40px 16px;
@@ -224,10 +211,10 @@ button {
 .menu.current {
   color: #404bbf;
 }
-.menu-mobile-item:hover,
-.menu-mobile-item:focus,
+.address-details-mobile:focus,
 .address-details-mobile:hover,
-.address-details-mobile:focus {
+.menu-mobile-item:focus,
+.menu-mobile-item:hover {
   color: #404bbf;
 }
 .address-list-mobile {
@@ -249,20 +236,21 @@ button {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .social-media-mobile {
   display: inline-flex;
   align-items: flex-start;
   gap: 40px;
 }
-/*section 1*/
+.main-first,
+.main-first-title {
+  margin: 0 auto;
+  text-align: center;
+}
 .main-first {
   max-width: 320px;
   background-color: #2e2f42;
   padding: 72px 0;
-  margin: 0 auto;
   flex-shrink: 0;
-  text-align: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -274,9 +262,7 @@ button {
 }
 .main-first-title {
   max-width: 288px;
-  margin: 0 auto;
   color: #fff;
-  text-align: center;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.07;
@@ -295,11 +281,10 @@ button {
   cursor: pointer;
   height: 56px;
   min-width: 169px;
-  border: none;
+  border: 0;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
-  margin-top: 48px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  margin: 48px auto 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
@@ -308,7 +293,6 @@ button {
 .button:focus {
   background: #404bbf;
 }
-
 @media screen and (min-width: 768px) {
   .main-first {
     max-width: 768px;
@@ -337,10 +321,7 @@ button {
       url(../images/people-office-tablet.jpg);
   }
 }
-
-/*section2*/
 .advantages-list {
-  padding: 96px 0;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -361,15 +342,14 @@ button {
   color: #2e2f42;
   margin-bottom: 8px;
 }
-.team-text,
-.advantages-text {
+.advantages-text,
+.team-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 500;
   color: #434455;
 }
-
 @media screen and (min-width: 768px) {
   .advantages-list-item {
     flex-basis: calc((100% - 24px) / 2);
@@ -417,17 +397,14 @@ button {
     font-weight: 500;
     line-height: 1.2;
   }
-  .team-text,
-  .advantages-text {
+  .advantages-text,
+  .team-text {
     font-weight: 400;
   }
 }
-
-/*section3*/
 .team {
   background-color: #f4f4fd;
 }
-
 .team-list-title {
   margin-bottom: 8px;
   font-weight: 500;
@@ -438,29 +415,29 @@ button {
   text-align: center;
   color: #2e2f42;
 }
-
+.portfolio-img img,
 .team-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+.icon-circle,
 .team-list {
   display: flex;
+  justify-content: center;
+}
+.team-list {
   flex-direction: column;
   gap: 72px;
-  justify-content: center;
 }
 .icon-circle {
   width: 40px;
   height: 40px;
   position: relative;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
-.icon-link:hover,
-.icon-link:focus {
+.icon-link:focus,
+.icon-link:hover {
   background-color: #404bbf;
 }
 .icon-link {
@@ -476,16 +453,14 @@ button {
 .icon-social {
   fill: #f4f4fd;
 }
-
 .social-media-team {
   display: flex;
   gap: 24px;
   justify-content: center;
   align-items: center;
 }
-
-.team-title,
-.portfolio-title {
+.portfolio-title,
+.team-title {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
@@ -503,11 +478,10 @@ button {
   margin-bottom: 8px;
 }
 .team-list-item {
-  background-color: #ffffff;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 @media screen and (min-width: 768px) {
   .team-list {
@@ -517,15 +491,12 @@ button {
     column-gap: 24px;
   }
 }
-
 @media screen and (min-width: 1158px) {
   .team-list {
     flex-wrap: nowrap;
     gap: 24px;
   }
 }
-
-/*section 4*/
 .portfolio {
   padding: 96px 0;
 }
@@ -538,6 +509,7 @@ button {
   text-align: left;
   color: #2e2f42;
 }
+.overlay,
 .portfolio-text {
   color: #434455;
   font-size: 16px;
@@ -556,7 +528,6 @@ button {
   height: 100%;
   width: 100%;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-descr {
   padding: 32px 16px;
@@ -565,13 +536,11 @@ button {
   z-index: 2;
   overflow: hidden;
 }
-
 .portfolio-item:hover .overlay {
   transform: translateY(0);
   z-index: 1;
   bottom: 0;
 }
-
 .portfolio-list {
   display: flex;
   flex-direction: column;
@@ -611,7 +580,6 @@ button {
     height: 300px;
   }
 }
-
 @media screen and (min-width: 1158px) {
   .portfolio {
     padding: 120px 0;
@@ -626,7 +594,6 @@ button {
     width: 360px;
   }
 }
-/*footer*/
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -649,7 +616,6 @@ button {
   background-color: #2e2f42;
   padding: 96px 0;
 }
-
 .footer-text {
   font-size: 16px;
   font-weight: 400;
@@ -669,9 +635,12 @@ button {
   margin-bottom: 16px;
   text-align: center;
 }
+.icon-footer,
 .social-media-icons {
   display: flex;
   justify-content: center;
+}
+.social-media-icons {
   gap: 16px;
   margin-bottom: 72px;
 }
@@ -679,12 +648,10 @@ button {
   width: 40px;
   height: 40px;
   position: relative;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
-.icon-link-footer:hover,
-.icon-link-footer:focus {
+.icon-link-footer:focus,
+.icon-link-footer:hover {
   background-color: #31d0aa;
 }
 .icon-link-footer {
@@ -714,7 +681,7 @@ button {
   gap: 16px;
   border-radius: 4px;
   background-color: #4d5ae5;
-  border: none;
+  border: 0;
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -726,11 +693,10 @@ button {
   height: 40px;
   cursor: pointer;
 }
-.btn-footer:hover,
-.btn-footer:focus {
+.btn-footer:focus,
+.btn-footer:hover {
   background: #404bbf;
 }
-
 .label-footer {
   color: #fff;
   font-size: 16px;
@@ -751,8 +717,8 @@ button {
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #fff;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  background: transparent;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+  background: 0 0;
   color: #fff;
   font-size: 12px;
   font-weight: 400;
@@ -788,7 +754,6 @@ button {
     gap: 24px;
     align-items: flex-end;
   }
-
   .input-footer {
     margin: 0;
     width: 264px;
@@ -800,7 +765,6 @@ button {
     justify-content: flex-start;
   }
 }
-
 @media screen and (min-width: 1158px) {
   .footer {
     padding: 100px 0;
@@ -819,8 +783,6 @@ button {
     justify-content: flex-end;
   }
 }
-
-/*Modal*/
 .backdrop {
   display: none;
   background-color: rgba(46, 47, 66, 0.4);
@@ -832,38 +794,34 @@ button {
   width: 100%;
   height: 100%;
 }
-
+.close-btn,
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .modal {
   display: none;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 16px 24px 16px;
+  padding: 72px 16px 24px;
   width: 288px;
   min-height: 623px;
   background: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal.is-open,
-.backdrop.is-open {
+.backdrop.is-open,
+.modal.is-open {
   display: block;
 }
 .close-btn {
-  position: absolute;
-  display: flex;
   align-self: flex-end;
-  justify-content: center;
-  align-items: center;
   top: 24px;
   right: 24px;
   width: 24px;
@@ -874,13 +832,11 @@ button {
   stroke: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   padding: 0;
 }
-
 .close-btn .close {
   fill: #2e2f42;
   position: absolute;
@@ -889,15 +845,14 @@ button {
   transform: translate(-50%, -50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.close-btn:hover .close,
-.close-btn:focus .close {
-  fill: #ffffff;
+.close-btn:focus .close,
+.close-btn:hover .close {
+  fill: #fff;
 }
-.close-btn:hover,
-.close-btn:focus {
+.close-btn:focus,
+.close-btn:hover {
   background-color: #404bbf;
-  border: none;
+  border: 0;
 }
 .modal-title {
   color: #2e2f42;
@@ -975,10 +930,8 @@ button {
   outline: transparent;
   padding: 8px 16px;
   resize: none;
-
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-checkbox {
   margin-bottom: 24px;
 }
@@ -997,13 +950,12 @@ button {
 }
 .modal-btn {
   display: block;
-
   align-items: center;
   gap: 10px;
   border-radius: 4px;
   background: #4d5ae5;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border: 0;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
@@ -1011,7 +963,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.03em;
   margin: 0 auto;
-
   height: 56px;
   min-width: 169px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1033,25 +984,23 @@ button {
   fill: transparent;
   margin-right: 8px;
 }
-
 input[type="checkbox"]:checked + .terms > .checkbox {
   background-color: #404bbf;
-  border: none;
+  border: 0;
   fill: #f4f4fd;
 }
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-btn:focus,
+.modal-btn:hover {
   background: #404bbf;
 }
-
 @media screen and (min-width: 768px) {
   .modal {
     width: 408px;
     min-height: 584px;
-    padding: 72px 24px 24px 24px;
+    padding: 72px 24px 24px;
   }
-  .modal-title,
-  .modal-form-input-container {
+  .modal-form-input-container,
+  .modal-title {
     width: 360px;
   }
 }
